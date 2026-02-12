@@ -15,6 +15,13 @@ export const profile = {
     title: '제약 속에서 구조를 설계하는 개발자',
     body: '현상을 질문으로 재정의하고, 시스템 흐름을 재구성하며, 수치와 실험으로 개선을 증명합니다.',
   },
+  aboutNarrative: [
+    'AI와 임베디드 시스템을 물리 환경에 연결하는 구조를 설계합니다.',
+    '모델 성능 자체보다 AI -> 통신 -> 제어 -> 물리 동작까지 이어지는 전체 시스템 구조 설계에 집중해왔습니다.',
+    '전자공학 기반 하드웨어 이해를 바탕으로 Arduino, Raspberry Pi, Jetson Orin Nano를 활용한 온디바이스 AI 추론, ROS2 기반 로봇 제어 구조 설계, Domain Adaptation 기반 실환경-시뮬레이션 격차 해소 프로젝트를 수행했습니다.',
+    'Linux 커널, 분산 시스템(HTCondor), 데이터 통신 이론을 학습하며 시스템 내부 동작 원리까지 이해하는 개발자가 되고자 노력해왔습니다.',
+    "기술을 '구현'하는 사람을 넘어, 제약 조건과 트레이드오프를 고려해 구조적으로 설계하는 엔지니어를 지향합니다.",
+  ],
   headline: '제약 속에서 구조를 설계하는 개발자',
   intro: '현상을 질문으로 재정의하고, 시스템 흐름을 재구성하며, 수치와 실험으로 개선을 증명합니다.',
   heroCard: {
@@ -88,10 +95,16 @@ export const profile = {
     '기술 선택은 팀의 유지보수 비용까지 포함해 결정한다.',
   ],
   background: [
-    '대학 연구실에서 실험 데이터 수집/정제 파이프라인을 유지보수했습니다.',
-    '운영체제 과목 조교로서 메모리/스케줄러 과제 디버깅을 코칭했습니다.',
-    'SSAFY 팀 프로젝트에서 기획-개발-회고 전 과정을 반복하며 제품 감각을 키웠습니다.',
+    '전자공학 전공 및 임베디드·마이크로프로세서·FPGA 과목 이수',
+    'Linux Kernel 세미나 및 분산 시스템 교육 수료',
+    'Arduino 10년, Raspberry Pi 8년 활용 경험',
+    'Jetson 기반 온디바이스 AI 추론 시스템 구현 경험',
   ],
-  interests: ['AI-driven Robotics'],
+  interests: [
+    'Physical AI Systems',
+    'Edge Robotics',
+    'Digital Twin Integration',
+    'Distributed Control Architecture',
+  ],
   extras: ['기술 글쓰기', '작곡/연주'],
 }

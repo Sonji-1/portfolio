@@ -1,5 +1,4 @@
 import SectionTitle from '../components/common/SectionTitle'
-import TechBadge from '../components/project/TechBadge'
 import { profile } from '../data/profile'
 import { skills } from '../data/skills'
 
@@ -8,9 +7,20 @@ function About() {
     <div className="page">
       <SectionTitle
         eyebrow="About"
-        title={`${profile.name}의 작업 방식`}
-        subtitle="기술 선택의 근거와 협업 방식이 드러나는 개발자를 지향합니다."
+        title={`작업 방식`}
+        subtitle="AI와 임베디드 시스템을 물리 환경에 연결하는 구조를 설계합니다."
       />
+
+      <section className="panel">
+        <h3>About</h3>
+        <div className="detail-sections">
+          {profile.aboutNarrative.map((line) => (
+            <p className="statement-text" key={line}>
+              {line}
+            </p>
+          ))}
+        </div>
+      </section>
 
       <section className="panel">
         <h3>배경</h3>
@@ -23,43 +33,35 @@ function About() {
 
       <section className="panel">
         <h3>관심 분야</h3>
-        <div className="badge-row">
+        <ul className="bullet-list">
           {profile.interests.map((topic) => (
-            <TechBadge key={topic} label={topic} />
+            <li key={topic}>{topic}</li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="panel">
         <h3>Skills</h3>
         <div className="skills-grid">
           <article className="skills-group">
-            <h4>많이 해봤어요</h4>
-            <div className="badge-row">
-              {skills.strong.map((skill) => (
-                <TechBadge key={skill} label={skill} />
+            <h4>Core Stack</h4>
+            <ul className="bullet-list compact">
+              {skills.core.map((skill) => (
+                <li key={skill}>{skill}</li>
               ))}
-            </div>
+            </ul>
           </article>
           <article className="skills-group">
-            <h4>해본 적 있어요</h4>
-            <div className="badge-row">
-              {skills.familiar.map((skill) => (
-                <TechBadge key={skill} label={skill} />
+            <h4>Hardware</h4>
+            <ul className="bullet-list compact">
+              {skills.hardware.map((skill) => (
+                <li key={skill}>{skill}</li>
               ))}
-            </div>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section className="panel">
-        <h3>기타</h3>
-        <div className="badge-row">
-          {profile.extras.map((item) => (
-            <TechBadge key={item} label={item} />
-          ))}
-        </div>
-      </section>
     </div>
   )
 }

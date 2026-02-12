@@ -1,19 +1,16 @@
 export const skills = {
-  strong: [
-    'JavaScript (ES6+)',
-    'React',
-    'Vite',
-    'TypeScript',
-    'Node.js',
-    'REST API 설계/연동',
-    'Git/GitHub 협업',
-  ],
-  familiar: [
-    'Next.js',
+  core: [
+    'C / C++',
     'Python',
-    'Docker',
-    'MySQL',
-    'C/C++',
-    'CI/CD (GitHub Actions)',
+    'ROS2',
+    'Linux',
+    'Embedded Systems',
+    'Computer Vision (YOLOv8-OBB)',
+  ],
+  hardware: [
+    'Arduino',
+    'Raspberry Pi',
+    'Jetson Orin Nano',
+    'STM32',
   ],
 }
