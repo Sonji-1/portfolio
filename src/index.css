@@ -751,6 +751,10 @@ ul {
   background: #0e1826;
 }
 
+.gallery-media-embed {
+  border: 0;
+}
+
 .gallery-item figcaption {
   padding: 0.55rem;
   font-size: 0.84rem;

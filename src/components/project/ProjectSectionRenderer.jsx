@@ -5,6 +5,7 @@ import SectionTitle from '../common/SectionTitle'
 function GalleryItem({ media }) {
   const [broken, setBroken] = useState(false)
   const isVideo = media.type === 'video' || /\.mp4($|\?)/i.test(media.src ?? '')
+  const isEmbed = media.type === 'embed'
 
   return (
     <figure className="gallery-item">
@@ -19,6 +20,14 @@ function GalleryItem({ media }) {
           >
             <source src={media.src} type={media.mimeType ?? 'video/mp4'} />
           </video>
+        ) : isEmbed ? (
+          <iframe
+            className="gallery-media gallery-media-embed"
+            src={media.src}
+            title={media.alt ?? media.caption ?? 'project gallery video'}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         ) : (
           <img
             className="gallery-media"
